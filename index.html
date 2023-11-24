@@ -1,29 +1,37 @@
-# alejremi.github.io
-hola k3
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Webpage</title>
+    <title>Simple Calculator</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
+        .calculator {
+            border: 2px solid #ccc;
+            border-radius: 5px;
             padding: 20px;
-            background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 18px;
+        }
+
         button {
-            padding: 10px 20px;
+            width: 48px;
+            height: 48px;
+            margin: 5px;
             font-size: 16px;
             cursor: pointer;
         }
@@ -31,22 +39,90 @@ hola k3
 </head>
 <body>
 
-<div class="container">
-    <h1>Simple Webpage</h1>
-    <p>This is a simple webpage with CSS and JavaScript.</p>
-    <button onclick="changeBackgroundColor()">Change Background Color</button>
+<div class="calculator">
+    <input type="text" id="display" readonly>
+
+    <div>
+        <button onclick="appendNumber('7')">7</button>
+        <button onclick="appendNumber('8')">8</button>
+        <button onclick="appendNumber('9')">9</button>
+        <button onclick="setOperator('+')">+</button>
+    </div>
+
+    <div>
+        <button onclick="appendNumber('4')">4</button>
+        <button onclick="appendNumber('5')">5</button>
+        <button onclick="appendNumber('6')">6</button>
+        <button onclick="setOperator('-')">-</button>
+    </div>
+
+    <div>
+        <button onclick="appendNumber('1')">1</button>
+        <button onclick="appendNumber('2')">2</button>
+        <button onclick="appendNumber('3')">3</button>
+        <button onclick="setOperator('*')">*</button>
+    </div>
+
+    <div>
+        <button onclick="appendNumber('0')">0</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="setOperator('/')">/</button>
+    </div>
 </div>
 
 <script>
-    function changeBackgroundColor() {
-        var body = document.body;
-        var currentColor = body.style.backgroundColor;
+    var currentInput = '';
+    var operator = '';
+    var result = '';
 
-        // If the current color is white or not set, change it to a light blue color; otherwise, change it to white.
-        body.style.backgroundColor = (currentColor === '' || currentColor === 'white') ? '#add8e6' : 'white';
+    function appendNumber(number) {
+        currentInput += number;
+        updateDisplay();
+    }
+
+    function setOperator(operatorSymbol) {
+        operator = operatorSymbol;
+        result = currentInput;
+        currentInput = '';
+        updateDisplay();
+    }
+
+    function clearDisplay() {
+        currentInput = '';
+        operator = '';
+        result = '';
+        updateDisplay();
+    }
+
+    function calculate() {
+        var num1 = parseFloat(result);
+        var num2 = parseFloat(currentInput);
+
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                result = num1 / num2;
+                break;
+        }
+
+        currentInput = result.toString();
+        operator = '';
+        updateDisplay();
+    }
+
+    function updateDisplay() {
+        document.getElementById('display').value = currentInput || result || '0';
     }
 </script>
 
 </body>
 </html>
-
