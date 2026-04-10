@@ -1,11 +1,11 @@
 :root {
-  --bg: #f9f6ef;
-  --bg-soft: #fffdf8;
-  --ink: #1b1e24;
-  --ink-muted: #4d5563;
-  --accent: #e4572e;
-  --accent-soft: #ffd8bf;
-  --line: #e8dfd3;
+  --bg: #edf3ea;
+  --bg-soft: #f8fcf5;
+  --ink: #233127;
+  --ink-muted: #4f6353;
+  --accent: #8a5a34;
+  --accent-soft: #dbe8d1;
+  --line: #d2dfca;
   --card-shadow: 0 18px 45px rgba(27, 30, 36, 0.08);
   --radius: 18px;
 }
@@ -24,9 +24,10 @@ body {
   font-family: "Sora", "Trebuchet MS", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at 10% 10%, #fff6eb 0%, transparent 35%),
-    radial-gradient(circle at 90% 0%, #ffe8d3 0%, transparent 40%),
-    linear-gradient(165deg, var(--bg) 0%, #fff 100%);
+    radial-gradient(circle at 12% 8%, #dcebd6 0%, transparent 34%),
+    radial-gradient(circle at 88% 2%, #f1e9d7 0%, transparent 40%),
+    radial-gradient(circle at 50% 100%, #d4e6ce 0%, transparent 48%),
+    linear-gradient(155deg, #e8f1e3 0%, var(--bg) 44%, #f3efe3 100%);
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -44,7 +45,7 @@ body {
   height: 320px;
   top: -90px;
   right: -70px;
-  background: conic-gradient(from 180deg, #ffe0c7, #ffd2b0, #ffe8d3);
+  background: conic-gradient(from 180deg, #cedfc4, #b8cfad, #dbe8d1);
   border-radius: 42% 58% 55% 45% / 43% 38% 62% 57%;
   animation: driftA 16s ease-in-out infinite;
 }
@@ -54,7 +55,7 @@ body {
   height: 240px;
   bottom: 60px;
   left: -70px;
-  background: linear-gradient(140deg, #ffd9bc, #ffe8d4);
+  background: linear-gradient(140deg, #d5e4cb, #ebe3ce);
   border-radius: 58% 42% 31% 69% / 62% 38% 62% 38%;
   animation: driftB 20s ease-in-out infinite;
 }
@@ -74,7 +75,7 @@ body {
   text-transform: uppercase;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: #fff9f2;
+  background: #f2f8ed;
   color: var(--ink-muted);
   margin-bottom: 1rem;
 }
@@ -147,7 +148,7 @@ a:hover {
 
 .item + .item {
   margin-top: 1.2rem;
-  border-top: 1px dashed #e1d7ca;
+  border-top: 1px dashed #ccdbc3;
   padding-top: 1rem;
 }
 
@@ -191,9 +192,9 @@ ul {
 }
 
 .tags li {
-  border: 1px solid #e5d8c7;
+  border: 1px solid #bfd1b5;
   background: var(--accent-soft);
-  color: #603b2f;
+  color: #415641;
   font-weight: 600;
   padding: 0.35rem 0.62rem;
   border-radius: 8px;
