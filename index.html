@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Curriculum vitae online de Alejandra Remi." />
-  <title>Alejandra Remi | CV</title>
+  <meta name="description" content="Curriculum vitae online." />
+  <title>CV</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -14,125 +14,49 @@
   <div class="bg-shape bg-shape-a" aria-hidden="true"></div>
   <div class="bg-shape bg-shape-b" aria-hidden="true"></div>
 
-  <header class="hero">
-    <p class="hero-kicker">Curriculum Vitae</p>
-    <h1>Alejandra Remi</h1>
-    <p class="hero-subtitle">Desarrolladora Web Frontend | HTML, CSS, JavaScript</p>
-
-    <ul class="contact-list" aria-label="Información de contacto">
-      <li><a href="mailto:tu-correo@ejemplo.com">tu-correo@ejemplo.com</a></li>
-      <li><a href="tel:+34000000000">+34 000 000 000</a></li>
-      <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-      <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-      <li>Madrid, España</li>
-    </ul>
+  <header class="hero" id="hero">
+    <p class="hero-kicker" id="hero-kicker">Curriculum Vitae</p>
+    <h1 id="hero-name"></h1>
+    <p class="hero-subtitle" id="hero-subtitle"></p>
+    <ul class="contact-list" id="contact-list" aria-label="Información de contacto"></ul>
   </header>
 
-  <main class="cv-wrapper">
+  <main class="cv-wrapper" id="cv-wrapper">
     <section class="card reveal">
       <h2>Perfil Profesional</h2>
-      <p>
-        Profesional orientada a resultados con experiencia construyendo interfaces web accesibles,
-        rápidas y mantenibles. Me enfoco en convertir necesidades de negocio en experiencias claras
-        para usuarios finales, colaborando de forma cercana con equipos de diseño y producto.
-      </p>
+      <p id="profile-text"></p>
     </section>
 
-    <section class="card reveal">
+    <section class="card reveal" id="experience-section">
       <h2>Experiencia</h2>
-
-      <article class="item">
-        <div class="item-head">
-          <h3>Frontend Developer · Empresa ABC</h3>
-          <p>2023 - Actualidad</p>
-        </div>
-        <ul>
-          <li>Desarrollé y mantuve componentes reutilizables para una plataforma SaaS.</li>
-          <li>Mejoré el rendimiento del sitio en un 35% optimizando carga de recursos.</li>
-          <li>Colaboré con UX/UI para mejorar accesibilidad y consistencia visual.</li>
-        </ul>
-      </article>
-
-      <article class="item">
-        <div class="item-head">
-          <h3>Desarrolladora Web · Estudio Digital XYZ</h3>
-          <p>2021 - 2023</p>
-        </div>
-        <ul>
-          <li>Construí sitios corporativos y landing pages responsive para clientes.</li>
-          <li>Integré APIs REST para mostrar datos dinámicos en paneles internos.</li>
-          <li>Automaticé tareas de despliegue y validación en flujos de trabajo.</li>
-        </ul>
-      </article>
     </section>
 
-    <section class="card reveal">
+    <section class="card reveal" id="education-section">
       <h2>Educación</h2>
-      <article class="item">
-        <div class="item-head">
-          <h3>Grado en Ingeniería Informática · Universidad Ejemplo</h3>
-          <p>2017 - 2021</p>
-        </div>
-      </article>
     </section>
 
     <section class="card reveal two-cols">
       <div>
         <h2>Habilidades Técnicas</h2>
-        <ul class="tags">
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Git</li>
-          <li>Figma</li>
-          <li>Accesibilidad Web</li>
-          <li>Diseño Responsive</li>
-        </ul>
+        <ul class="tags" id="skills-list"></ul>
       </div>
       <div>
         <h2>Idiomas</h2>
-        <ul>
-          <li>Español: Nativo</li>
-          <li>Inglés: B2</li>
-          <li>Francés: A2</li>
-        </ul>
+        <ul id="languages-list"></ul>
       </div>
     </section>
 
-    <section class="card reveal">
+    <section class="card reveal" id="projects-section">
       <h2>Proyectos Destacados</h2>
-      <article class="item">
-        <div class="item-head">
-          <h3>Dashboard de Métricas de Ventas</h3>
-          <a href="#" aria-label="Abrir proyecto Dashboard de Métricas de Ventas">Ver proyecto</a>
-        </div>
-        <p>
-          Aplicación web con panel de visualización de datos y filtros por fecha, categoría y canal.
-          Implementé diseño responsive, arquitectura modular y carga diferida de componentes.
-        </p>
-      </article>
-
-      <article class="item">
-        <div class="item-head">
-          <h3>Portafolio para Marca Personal</h3>
-          <a href="#" aria-label="Abrir proyecto Portafolio para Marca Personal">Ver proyecto</a>
-        </div>
-        <p>
-          Sitio enfocado en conversión, optimizado para SEO técnico y tiempos de carga rápidos.
-          Incluye formulario de contacto validado y animaciones ligeras de entrada.
-        </p>
-      </article>
     </section>
   </main>
 
   <footer>
-    <p>Disponible para nuevos proyectos y oportunidades.</p>
-    <p>&copy; <span id="year"></span> Alejandra Remi</p>
+    <p id="availability-text"></p>
+    <p>&copy; <span id="year"></span> <span id="footer-name"></span></p>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <noscript>Necesitas activar JavaScript para ver el contenido del CV.</noscript>
+  <script src="app.js" defer></script>
 </body>
 </html>

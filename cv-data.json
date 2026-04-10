@@ -1,0 +1,90 @@
+{
+  "site": {
+    "kicker": "Curriculum Vitae",
+    "name": "Alejandro Remiro Donaire",
+    "role": "Ingenierio de Computadores"
+  },
+  "contact": [
+    {
+      "label": "tu-correo@ejemplo.com",
+      "type": "email",
+      "value": "tu-correo@ejemplo.com"
+    },
+    {
+      "label": "+34 000 000 000",
+      "type": "phone",
+      "value": "+34000000000"
+    },
+    {
+      "label": "LinkedIn",
+      "type": "link",
+      "value": "https://www.linkedin.com/"
+    },
+    {
+      "label": "GitHub",
+      "type": "link",
+      "value": "https://github.com/"
+    },
+    {
+      "label": "Madrid, Espana",
+      "type": "text"
+    }
+  ],
+  "profile": "Profesional orientada a resultados con experiencia construyendo interfaces web accesibles, rapidas y mantenibles. Me enfoco en convertir necesidades de negocio en experiencias claras para usuarios finales, colaborando de forma cercana con equipos de diseno y producto.",
+  "experience": [
+    {
+      "title": "Frontend Developer",
+      "company": "Empresa ABC",
+      "period": "2023 - Actualidad",
+      "highlights": [
+        "Desarrolle y mantuve componentes reutilizables para una plataforma SaaS.",
+        "Mejore el rendimiento del sitio en un 35% optimizando carga de recursos.",
+        "Colabore con UX/UI para mejorar accesibilidad y consistencia visual."
+      ]
+    },
+    {
+      "title": "Desarrolladora Web",
+      "company": "Estudio Digital XYZ",
+      "period": "2021 - 2023",
+      "highlights": [
+        "Construi sitios corporativos y landing pages responsive para clientes.",
+        "Integre APIs REST para mostrar datos dinamicos en paneles internos.",
+        "Automatice tareas de despliegue y validacion en flujos de trabajo."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Grado en Ingenieria Informatica",
+      "institution": "Universidad Ejemplo",
+      "period": "2017 - 2021"
+    }
+  ],
+  "skills": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "React",
+    "Git",
+    "Figma",
+    "Accesibilidad Web",
+    "Diseno Responsive"
+  ],
+  "languages": [
+    "Espanol: Nativo",
+    "Ingles: B2",
+    "Frances: A2"
+  ],
+  "projects": [
+    {
+      "name": "Dashboard de Metricas de Ventas",
+      "url": "#",
+      "description": "Aplicacion web con panel de visualizacion de datos y filtros por fecha, categoria y canal. Implemente diseno responsive, arquitectura modular y carga diferida de componentes."
+    },
+    {
+      "name": "Portafolio para Marca Personal",
+      "url": "#",
+      "description": "Sitio enfocado en conversion, optimizado para SEO tecnico y tiempos de carga rapidos. Incluye formulario de contacto validado y animaciones ligeras de entrada."
+    }
+  ]
+}
